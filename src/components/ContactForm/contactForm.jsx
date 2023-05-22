@@ -1,6 +1,6 @@
 import React from "react";
 import { Formik } from 'formik';
-import { Form, Label, Field, ErrorMessage } from './contactForm.styled'
+import { Form, Label, Field, ErrorMessage, Btn, ContainerBtn } from './contactForm.styled'
 import { ContactSchema} from 'components/Utils/validate.js';
 import { nanoid } from 'nanoid';
 import PropTypes from 'prop-types';
@@ -42,9 +42,9 @@ export const ContactForm = ({ onSubmit }) => {
                     />
                     <ErrorMessage name="number" component='div' />
                 </Label>
-    
-            <button type="submit">Add to contact</button>
-    
+    <ContainerBtn>
+            <Btn type="submit">Add to contact</Btn>
+    </ContainerBtn>
     
             </Form>
         </Formik>
